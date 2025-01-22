@@ -20,19 +20,6 @@ En términos de desarrollo, la aplicación será creada bajo los principios de l
 
 ## ➕ Definición de Alternativa
 
-Para este proyecto se plantea construir una aplicación web de toma de notas, que contará con acciones
-específicas como la creación de un usuario con su sistema de inicio de sesión correspondiente, para que el usuario pueda guardar sus notas personales de forma segura. Para esto se emepleará una base de datos usando , tomando en cuenta que es un proyecto pequeño,
-
-¡Definitivamente! Tu **solución preliminar** es un excelente punto de partida para redactar tu **definición de la alternativa**, ya que ya tienes una estructura clara y bien organizada con los aspectos esenciales del proyecto. Solo necesitas adaptar el contenido para que sea más descriptivo y específico en cuanto a **qué hace tu proyecto** y **cómo lo hará**, centrándote en los puntos clave sin entrar en demasiados detalles técnicos (los cuales puedes guardar para secciones posteriores).
-
-### Cómo estructurar tu Definición de la Alternativa:
-
-A continuación, te muestro cómo podrías transformar tu solución preliminar en una **Definición de la Alternativa** bien redactada:
-
----
-
-### Definición de la Alternativa
-
 **Nombre del Proyecto**: Bloc de Notas para Estudiantes
 
 Nuestra alternativa propone el desarrollo de una **aplicación web de toma de notas** diseñada específicamente para satisfacer las necesidades de los estudiantes. Esta herramienta permitirá organizar y gestionar sus apuntes, ideas y tareas de manera eficiente, integrando funcionalidades avanzadas y tecnologías modernas que la diferencian de las soluciones existentes en el mercado.
