@@ -1,8 +1,8 @@
 Avance 1 - 15% (Definición de alternativa - Diagramas de clases - Solución preliminar)
 
-# 🗒️ Aplicación Web de Toma de Notas
+# 🌐 Sistema WebScrapping
 
-## 🌐 Colaboradores
+## 🗒️ Colaboradores
 
 ```
 ├── Santiago Gamboa Martínez
@@ -12,213 +12,223 @@ Avance 1 - 15% (Definición de alternativa - Diagramas de clases - Solución pre
 
 ## 🏆 Introducción
 
-Como equipo, hemos elegido desarrollar la `alternativa 5`, proponiendo un proyecto que aborda necesidades específicas compartidas por algunos estudiantes: **_una aplicación web de toma de notas_** 📝. Esta herramienta permitirá a los usuarios llevar un seguimiento organizado de sus tareas, ideas y pensamientos, e incluso redactar textos más largos.
+En el contexto actual, donde la cantidad de información disponible en internet crece de manera exponencial, la extracción eficiente de datos relevantes se ha convertido en una necesidad crucial para diversos sectores. El desarrollo de un sistema de web scraping representa una solución tecnológica para obtener, procesar y analizar información de forma automatizada desde sitios web. Por esta razón, como equipo, hemos elegido desarrollar la `alternativa 2`: **_Sistema de WebScrapping_**, este proyecto propone el diseño e implementación de un sistema de web scraping que no solo cumpla con los objetivos de extracción de datos, sino que esté estructurado bajo los principios fundamentales de la Programación Orientada a Objetos (POO).
 
-💫 El **objetivo principal** del proyecto es facilitar el aprendizaje y la gestión del aparendizaje en el ámbito educativo, brindando una solución personalizada para estudiantes. Nuestra aplicación no busca replicar proyectos tradicionales que usan librerías como Tkinter ni basarse directamente con plataformas comerciales como Notion o Joplin, diseñadas para un uso general. En cambio, queremos enfocarnos en las necesidades específicas del entorno académico, ofreciendo una herramienta que permita a los usuarios organizar sus apuntes de manera eficiente, sintetizar conceptos clave y compartir ideas en un entorno accesible.
+La elección de POO como paradigma principal radica en su capacidad para ofrecer una arquitectura modular, reutilizable y escalable, cualidades esenciales en un proyecto de esta naturaleza. Mediante el uso de conceptos como encapsulación, herencia, composición, polimorfismo y abstracción, el sistema garantizará un diseño robusto que permita extender sus funcionalidades de manera eficiente y manejar la complejidad inherente al tratamiento de datos en entornos estáticos y dinámicos.
 
-En términos de desarrollo, la aplicación será creada bajo los principios de la programación orientada a objetos (POO), lo que nos facilitará la modularidad, el mantenimiento y la escalabilidad del proyecto.
+Este proyecto no solo busca cumplir con los objetivos técnicos del desarrollo de un sistema funcional, sino también destacar el valor pedagógico de aplicar los pilares de POO en un contexto práctico. De esta manera, se contribuye al fortalecimiento de habilidades de diseño y programación, alineándose con los requerimientos académicos y profesionales.
 
 ## ➕ Definición de Alternativa
 
-**Nombre del Proyecto**: Bloc de Notas para Estudiantes
+La alternativa para este proyecto consiste en el desarrollo de un sistema de web scraping que emplee como pilar principal la Programación Orientada a Objetos (POO). El sistema será desarrollado en Python, un lenguaje ampliamente reconocido por su versatilidad y su extenso ecosistema de librerías diseñadas para la extracción y manipulación de datos desde la web.
 
-Nuestra alternativa propone el desarrollo de una **aplicación web de toma de notas** diseñada específicamente para satisfacer las necesidades de los estudiantes. Esta herramienta permitirá organizar y gestionar sus apuntes, ideas y tareas de manera eficiente, integrando funcionalidades avanzadas y tecnologías modernas que la diferencian de las soluciones existentes en el mercado.
+### Características principales:
 
-El objetivo principal es ofrecer una solución práctica, segura y escalable que sea fácil de usar y personalizable. El proyecto se desarrollará bajo los principios de la **programación orientada a objetos (POO)**, garantizando un diseño modular y de alta calidad.
+1. **Aplicación de POO**:  
+   El diseño del sistema estará basado en los pilares de POO:
 
----
+   - **Encapsulación** para proteger y organizar datos.
+   - **Abstracción** para simplificar la interacción con el sistema.
+   - **Herencia** para evitar redundancias y fomentar la reutilización de código.
+   - **Polimorfismo** para permitir extensibilidad y personalización.
 
-### Funcionalidades de la Aplicación
+2. **Uso de Python y sus librerías especializadas**:
 
-#### Funcionalidades Básicas:
+   - **Requests**: Para realizar solicitudes HTTP y acceder al contenido de las páginas web.
+   - **BeautifulSoup** (de la biblioteca bs4): Para parsear HTML y extraer información estructurada.
+   - **Selenium** (si se requiere interacción dinámica): Para manejar sitios web que cargan contenido de forma asíncrona o que requieren simulación de usuarios.
+   - **Pandas**: Para procesar y almacenar los datos extraídos en formatos como CSV o bases de datos.
 
-- **Gestión de Notas**: Crear, leer, actualizar y eliminar notas de forma intuitiva.
-- **Sistema de Inicio de Sesión**: Permitir que los usuarios se registren, inicien y cierren sesión de manera segura.
-- **Organización de Notas**: Agrupar notas mediante etiquetas o categorías para facilitar la búsqueda.
-- **Búsqueda Avanzada**: Filtrar notas por palabras clave, etiquetas o fechas.
+3. **Requerimientos tecnológicos adicionales**:
+   - **Gestión de dependencias**: Uso de herramientas como `pip` o archivos `requirements.txt` para garantizar la instalación de librerías necesarias.
+   - **Control de versiones**: Implementación de Git para mantener un historial claro del desarrollo y facilitar la colaboración en equipo.
+   - **Entorno de ejecución**: Uso de entornos virtuales (`venv`) para asegurar compatibilidad y aislamiento de dependencias.
+   - **Persistencia de datos**: Almacenamiento de la información extraída en formatos accesibles, como bases de datos SQLite o archivos JSON/CSV.
 
-#### Funcionalidades Avanzadas:
+### Ventajas de esta alternativa:
 
-- **Modo Oscuro/Claro**: Adaptar la interfaz según las preferencias del usuario.
-- **Sincronización en Tiempo Real**: Habilitar la colaboración entre usuarios en las notas compartidas.
-- **Notificaciones**: Enviar alertas sobre cambios en notas colaborativas o recordatorios.
-- **Exportación de Notas**: Descargar notas en formatos como PDF o Markdown para mayor flexibilidad.
-- **Adjuntos**: Posibilidad de cargar y asociar archivos a las notas.
-
----
-
-### Enfoque Técnico
-
-El proyecto será desarrollado utilizando tecnologías modernas:
-
-- **Backend**: Django, con Django REST Framework para la creación de API y SQLite como base de datos en producción.
-- **Frontend**: React, utilizando Tailwind CSS para un diseño atractivo y Redux para la gestión del estado global.
-- **Seguridad**: Autenticación mediante JWT, protección contra CSRF y encriptación avanzada para datos sensibles.
-
----
-
-### Diferenciadores de la Alternativa
-
-A diferencia de otras aplicaciones de notas generalistas como Notion o Joplin, nuestro proyecto está diseñado específicamente para estudiantes, con un enfoque en:
-
-- **Productividad Académica**: Herramientas que facilitan el aprendizaje y la organización de apuntes.
-- **Personalización**: Funcionalidades como el modo oscuro y etiquetas personalizables.
-- **Simplicidad y Usabilidad**: Interfaz moderna y fácil de usar para que los estudiantes puedan enfocarse en lo importante.
-
----
-
-### Alcance de la Alternativa
-
-En su primera versión, la aplicación incluirá las funcionalidades básicas de gestión de notas y autenticación de usuarios. Las funcionalidades avanzadas se implementarán en fases posteriores, permitiendo iterar sobre la solución para agregar más valor al proyecto con base en la retroalimentación de los usuarios.
+- Facilita la organización y escalabilidad del sistema gracias a la implementación de POO.
+- Aprovecha el amplio ecosistema de Python, que incluye librerías maduras y bien documentadas.
+- Brinda flexibilidad para adaptarse a diversas necesidades, como la extracción de datos estáticos o dinámicos.
+- Fomenta la adquisición de habilidades de diseño y codificación estructurada para su aplicación en escenarios reales.
 
 ## 📈 Diagrama de Clases
 
+```mermaid
+classDiagram
+    %% Clase base: Scraper
+    class Scraper {
+        - base_url: str
+        - headers: dict
+        + fetch_data(): abstract
+        + handle_errors(error): void
+    }
+
+    %% Clase derivada: StaticScraper
+    class StaticScraper {
+        + fetch_data(): BeautifulSoup
+        + parse_data(soup, selector): list
+    }
+
+    %% Clase derivada: DynamicScraper
+    class DynamicScraper {
+        - driver_path: str
+        + fetch_data(): BeautifulSoup
+        + parse_data(soup, selector): list
+    }
+
+    %% Clase para gestión de datos: DataManager
+    class DataManager {
+        - data: list
+        + add_data(extracted_data): void
+        + save_to_csv(file_name): void
+    }
+
+    %% Clase controladora: WebScrapingApp
+    class WebScrapingApp {
+        - scraper: Scraper
+        - data_manager: DataManager
+        + start_scraping(selector): void
+    }
+
+    %% Relaciones
+    Scraper <|-- StaticScraper : herencia
+    Scraper <|-- DynamicScraper : herencia
+    WebScrapingApp o-- Scraper : composición
+    WebScrapingApp o-- DataManager : composición
+```
+
+### **Explicación de los Pilares de POO**
+
+1. **Herencia**  
+   - **Dónde se aplica**: La clase `Scraper` es la clase base abstracta de la cual derivan `StaticScraper` y `DynamicScraper`.  
+   - **Por qué es importante**: Permite reutilizar código común entre los diferentes tipos de scrapers, reduciendo duplicación y facilitando mantenimiento.  
+
+2. **Abstracción**  
+   - **Dónde se aplica**: La clase `Scraper` define el método abstracto `fetch_data`, que las subclases implementan según sus propias necesidades.  
+   - **Por qué es importante**: Oculta los detalles específicos del scraping (estático o dinámico) al usuario del sistema, ofreciendo una interfaz clara.  
+
+3. **Polimorfismo**  
+   - **Dónde se aplica**: El método `fetch_data` es implementado de manera distinta en `StaticScraper` y `DynamicScraper`, pero ambas subclases pueden ser usadas de manera intercambiable en el sistema.  
+   - **Por qué es importante**: Permite que el sistema maneje diferentes tipos de scrapers sin necesidad de modificar el código principal de la aplicación.  
+
+4. **Encapsulación**  
+   - **Dónde se aplica**: Atributos como `base_url`, `headers` y `driver_path` son protegidos o privados, asegurando que solo las propias clases o subclases tengan acceso directo a ellos.  
+   - **Por qué es importante**: Mantiene los datos seguros y previene que sean modificados de forma indebida desde fuera de las clases.  
+
+5. **Composición**  
+   - **Dónde se aplica**: La clase `WebScrapingApp` utiliza instancias de `Scraper` (o sus subclases) y `DataManager`.  
+   - **Por qué es importante**: Fomenta la modularidad, ya que permite que los componentes del sistema interactúen entre sí sin estar fuertemente acoplados.  
+
 ## 💿 Solución Preliminar
 
-### **Objetivo del Proyecto**
+#### **Objetivo General**
 
-Desarrollar una aplicación web para gestionar notas, utilizando buenas prácticas de programación orientada a objetos (POO) y tecnologías modernas. La aplicación debe destacar por su:
-
-- **Funcionalidad**: CRUD de notas (Crear, Leer, Actualizar, Eliminar).
-- **Estética**: Interfaz amigable y moderna.
-- **Seguridad**: Gestión segura de datos y contraseñas.
-- **Escalabilidad**: Código modular y estructurado para futuras ampliaciones.
+Desarrollar un sistema de web scraping basado en la Programación Orientada a Objetos (POO) que permita extraer, procesar y almacenar información de manera eficiente, utilizando Python y sus herramientas tecnológicas especializadas.
 
 ---
 
-### **1. Definición de Requisitos**
+#### **Arquitectura del Proyecto**
 
-### **1.1. Funcionalidades Básicas**
+El proyecto estará compuesto por los siguientes módulos principales, diseñados bajo los principios de POO:
 
-- **Gestión de Notas**: CRUD completo de notas.
-- **Sistema de Inicio de Sesión**: Registro, inicio de sesión y cierre de sesión seguro.
-- **Organización de Notas**: Posibilidad de agrupar notas por etiquetas o categorías.
-- **Búsqueda y Filtros**: Permitir búsqueda avanzada por palabras clave, etiquetas o fechas.
+1. **Clase Base: `Scraper`**
 
-### **1.2. Funcionalidades Avanzadas**
+   - **Responsabilidad**:
+     - Actuar como la clase abstracta base para otros scrapers específicos.
+     - Definir métodos comunes como establecer conexión con páginas web y manejo de errores.
+   - **Atributos**:
+     - `base_url`: URL del sitio objetivo.
+     - `headers`: Cabeceras HTTP para simular navegadores.
+   - **Métodos Abstractos**:
+     - `fetch_data()`: Método abstracto que las subclases implementarán según las necesidades de extracción.
 
-- **Modo Oscuro/Claro**: Personalización de la interfaz para mejorar la experiencia del usuario.
-- **Sincronización en Tiempo Real**: Colaboración en notas entre usuarios mediante WebSockets.
-- **Notificaciones**: Alertas por cambios en notas colaborativas o recordatorios automáticos.
-- **Exportación de Notas**: Descargar notas en formatos como PDF o Markdown.
-- **Adjuntos**: Posibilidad de cargar y asociar archivos multimedia a las notas.
+2. **Clase Derivada: `StaticScraper`**
 
----
+   - **Responsabilidad**:
+     - Extraer información de sitios con contenido estático.
+   - **Librerías Utilizadas**:
+     - `requests`, `BeautifulSoup`.
+   - **Métodos Clave**:
+     - `fetch_data()`: Descarga el contenido HTML y lo parsea con BeautifulSoup.
+     - `parse_data()`: Extrae información específica como tablas, encabezados o enlaces.
 
-### **2. Tecnologías y Herramientas**
+3. **Clase Derivada: `DynamicScraper`**
 
-### **Backend**
+   - **Responsabilidad**:
+     - Manejar sitios con contenido dinámico que requiere interacción, utilizando Selenium.
+   - **Librerías Utilizadas**:
+     - `Selenium`, `webdriver`.
+   - **Métodos Clave**:
+     - `fetch_data()`: Interactúa con el sitio web simulando acciones del usuario.
+     - `parse_data()`: Extrae contenido generado dinámicamente.
 
-- **Framework**: Django (con Django REST Framework para la creación de APIs).
-- **Base de Datos**: PostgreSQL para producción y SQLite para desarrollo.
-- **Autenticación**: Gestión con Django-Auth y tokens JWT.
-- **Notificaciones en Tiempo Real**: Implementadas mediante Django Channels y WebSockets.
+4. **Clase para Gestión de Datos: `DataManager`**
 
-### **Frontend**
+   - **Responsabilidad**:
+     - Procesar y almacenar los datos extraídos.
+   - **Atributos**:
+     - `data`: Estructura de datos para mantener la información temporalmente.
+   - **Métodos Clave**:
+     - `save_to_csv()`: Guarda los datos en un archivo CSV.
+     - `save_to_database()`: Almacena los datos en SQLite o cualquier base de datos relacional.
 
-- **Framework**: React.
-- **Estilos**: Tailwind CSS o Bootstrap para un diseño moderno y responsivo.
-- **Estado Global**: Redux para manejar datos de usuario y notas.
-
-### **Seguridad**
-
-- **Contraseñas**: Hashing con bcrypt o Argon2.
-- **Protección**: Middleware para prevenir ataques CSRF y XSS.
-- **Encriptación**: Uso de bibliotecas como `cryptography` para proteger notas sensibles.
-
-### **Despliegue**
-
-- **Backend**: Heroku o AWS para el entorno de producción.
-- **Frontend**: Vercel o Netlify para hosting de la interfaz de usuario.
-
----
-
-### **3. Diseño de la Arquitectura**
-
-### **3.1. Estructura del Proyecto**
-
-**Backend (Django):**
-
-```
-/mi_aplicacion
-    /app
-        /models
-            user.py      # Modelo de Usuario.
-            note.py      # Modelo de Nota.
-        /routes
-            auth_routes.py  # Rutas de autenticación.
-            note_routes.py  # Rutas del CRUD de notas.
-        /templates
-        /static
-    /tests
-        test_auth.py
-        test_note.py
-    manage.py
-```
-
-**Frontend (React):**
-
-```
-/src
-    /components
-        NoteCard.js       # Componente para mostrar una nota.
-        NoteForm.js       # Formulario para crear o editar notas.
-    /pages
-        LoginPage.js      # Página de inicio de sesión.
-        NotesPage.js      # Página principal con todas las notas.
-    /redux
-        store.js          # Configuración del estado global.
-        slices/
-            notesSlice.js  # Gestión de estado de las notas.
-            authSlice.js   # Gestión de estado de autenticación.
-    index.js
-```
-
-### **3.2. Modelos de Datos**
-
-**Usuario (User):**
-
-- Atributos: `id`, `username`, `email`, `password_hash`, `fecha_creación`.
-- Relaciones: Un usuario tiene muchas notas.
-
-**Nota (Note):**
-
-- Atributos: `id`, `título`, `contenido`, `fecha_creación`, `etiquetas`, `usuario_id`.
-- Relaciones: Cada nota pertenece a un usuario.
+5. **Clase Controladora: `WebScrapingApp`**
+   - **Responsabilidad**:
+     - Coordinar la interacción entre las diferentes clases y gestionar el flujo del programa.
+   - **Métodos Clave**:
+     - `start_scraping()`: Inicia el proceso de scraping según el tipo de sitio web (estático o dinámico).
+     - `display_results()`: Muestra los datos extraídos en consola o interfaz gráfica.
 
 ---
 
-### **4. Cronograma de Desarrollo**
+#### **Requerimientos Técnicos**
 
-### **Fase 1: Configuración y Diseño**
+1. **Lenguaje y Herramientas**:
 
-- Configurar el entorno de desarrollo (Django, React).
-- Crear los modelos básicos (Usuario y Nota).
-- Definir las rutas y vistas iniciales.
-- Diseñar la estructura del frontend.
+   - **Python**: Lenguaje principal.
+   - **Librerías**:
+     - `requests`, `BeautifulSoup` para scraping estático.
+     - `Selenium` para scraping dinámico.
+     - `Pandas` para procesar y almacenar datos.
+     - `sqlite3` o `SQLAlchemy` para manejo de bases de datos.
 
-### **Fase 2: Desarrollo de Funcionalidades**
+2. **Entorno de Desarrollo**:
 
-- Implementar CRUD de notas.
-- Desarrollar el sistema de autenticación.
-- Añadir etiquetas y filtros para la organización de notas.
+   - Uso de entornos virtuales (`venv`) para la instalación de dependencias.
+   - Control de versiones con Git.
 
-### **Fase 3: Mejoras y Funcionalidades Avanzadas**
-
-- Implementar sincronización en tiempo real.
-- Añadir exportación de notas a PDF o Markdown.
-- Desarrollar el sistema de notificaciones.
-- Integrar modo oscuro y opciones de personalización.
-
-### **Fase 4: Pruebas y Despliegue**
-
-- Escribir pruebas unitarias para backend y frontend.
-- Desplegar la aplicación para su uso.
+3. **Formato de Almacenamiento**:
+   - Datos exportados a archivos CSV o almacenados en bases de datos SQLite para análisis posterior.
 
 ---
 
-### **5. Valor Agregado del Proyecto**
+#### **Plan de Implementación**
 
-- **Diseño Responsive**: Uso de herramientas modernas para asegurar compatibilidad en dispositivos móviles.
-- **Seguridad**: Gestión robusta de contraseñas y protección contra ataques comunes.
-- **Escalabilidad**: Arquitectura modular y preparada para añadir nuevas funcionalidades en el futuro.
+1. **Fase 1: Diseño**
+
+   - Diagramar la arquitectura del sistema utilizando diagramas UML (clases, relaciones).
+   - Definir los atributos y métodos para cada clase según las necesidades del proyecto.
+
+2. **Fase 2: Desarrollo**
+
+   - Implementar la clase base y las derivadas (`Scraper`, `StaticScraper`, `DynamicScraper`).
+   - Desarrollar el módulo de gestión de datos (`DataManager`).
+   - Implementar la clase controladora (`WebScrapingApp`).
+
+3. **Fase 3: Pruebas**
+
+   - Realizar pruebas unitarias para cada clase.
+   - Ejecutar pruebas funcionales para validar el flujo completo del sistema.
+
+4. **Fase 4: Documentación y Entrega**
+   - Documentar el código utilizando estándares como docstrings.
+   - Crear un manual de usuario y una guía técnica del proyecto.
+
+---
+
+#### **Resultados Esperados**
+
+- Sistema funcional capaz de extraer datos de sitios web estáticos y dinámicos.
+- Almacenamiento organizado de los datos en formatos accesibles.
+- Código modular, reutilizable y escalable, que cumpla con los principios de POO.
